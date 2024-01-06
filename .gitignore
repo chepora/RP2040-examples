@@ -1,52 +1,11 @@
-# Prerequisites
-*.d
+# Ignoring directories
+# Both the directory itself and its contents will be ignored.
+bin/
+gen/
 
-# Object files
-*.o
-*.ko
-*.obj
-*.elf
+[bB]uild/
 
-# Linker output
-*.ilk
-*.map
-*.exp
+.vscode/
 
-# Precompiled Headers
-*.gch
-*.pch
-
-# Libraries
-*.lib
-*.a
-*.la
-*.lo
-
-# Shared objects (inc. Windows DLLs)
-*.dll
-*.so
-*.so.*
-*.dylib
-
-# Executables
-*.exe
-*.out
-*.app
-*.i*86
-*.x86_64
-*.hex
-
-# Debug files
-*.dSYM/
-*.su
-*.idb
-*.pdb
-
-# Kernel Module Compile Results
-*.mod*
-*.cmd
-.tmp_versions/
-modules.order
-Module.symvers
-Mkfile.old
-dkms.conf
+# please do ignore yourself
+!.gitignore 
