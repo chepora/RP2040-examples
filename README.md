@@ -17,6 +17,6 @@ All examples are independent of another and all depend on [RPi Pico SDK V1.5.1](
     -
 
 - [`timer`](https://github.com/chepora/RP2040-examples/tree/main/timer)
-    -
+    - [`timer_repeating_led`](https://github.com/chepora/RP2040-examples/tree/main/timer/timer_repeating_led): A repeating timer that toggles the LED
 
 
