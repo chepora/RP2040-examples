@@ -1,14 +1,10 @@
-# Simple Button with Interrupt and LED Example
+# Repeating Timer Example
 
-Basic button connected to an interrupt and LED example.
-No debouncing to see here.
-A button press toggles the LED and the effects of the missing debouncing can be seen quite clearly.
+A repeating timer that toggles the LED.
 
 What can be changed:
 - definition of `LED_PIN`
-- definition of `BUTTON_PIN`
-- if using pull-up resistor for input via defining `PULL_UP_INPUT`, else pull-down will be set
-- disabling the default set Schmitt trigger hysteresis on input via defining `DISABLE_HYSTERESIS`
+- definition of `TIMER_DELAY_MS`
 
 ## Configuring the environment
 
