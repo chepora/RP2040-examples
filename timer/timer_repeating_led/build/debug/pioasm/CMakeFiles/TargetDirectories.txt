@@ -1,3 +1,0 @@
-/home/agr/EmbeddedDesign/RP2040/mes_pico_project/timer/timer_led_no_ir/build/debug/pioasm/CMakeFiles/pioasm.dir
-/home/agr/EmbeddedDesign/RP2040/mes_pico_project/timer/timer_led_no_ir/build/debug/pioasm/CMakeFiles/edit_cache.dir
-/home/agr/EmbeddedDesign/RP2040/mes_pico_project/timer/timer_led_no_ir/build/debug/pioasm/CMakeFiles/rebuild_cache.dir
