@@ -1,3 +1,0 @@
-/home/agr/EmbeddedDesign/RP2040-examples/button/button_timer_db/build/release/pioasm/CMakeFiles/pioasm.dir
-/home/agr/EmbeddedDesign/RP2040-examples/button/button_timer_db/build/release/pioasm/CMakeFiles/edit_cache.dir
-/home/agr/EmbeddedDesign/RP2040-examples/button/button_timer_db/build/release/pioasm/CMakeFiles/rebuild_cache.dir
