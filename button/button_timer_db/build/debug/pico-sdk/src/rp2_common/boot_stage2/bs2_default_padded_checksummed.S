@@ -1,4 +1,4 @@
-// Padded and checksummed version of: /home/agr/EmbeddedDesign/RP2040/mes_pico_project/button/button_timer_db/build/debug/pico-sdk/src/rp2_common/boot_stage2/bs2_default.bin
+// Padded and checksummed version of: /home/agr/EmbeddedDesign/RP2040-examples/button/button_timer_db/build/debug/pico-sdk/src/rp2_common/boot_stage2/bs2_default.bin
 
 .cpu cortex-m0plus
 .thumb

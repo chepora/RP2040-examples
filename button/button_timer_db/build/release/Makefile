@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/agr/EmbeddedDesign/RP2040/mes_pico_project/button/button_timer_db
+CMAKE_SOURCE_DIR = /home/agr/EmbeddedDesign/RP2040-examples/button/button_timer_db
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/agr/EmbeddedDesign/RP2040/mes_pico_project/button/button_timer_db/build/release
+CMAKE_BINARY_DIR = /home/agr/EmbeddedDesign/RP2040-examples/button/button_timer_db/build/release
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/agr/EmbeddedDesign/RP2040/mes_pico_project/button/button_timer_db/build/release/CMakeFiles /home/agr/EmbeddedDesign/RP2040/mes_pico_project/button/button_timer_db/build/release//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/agr/EmbeddedDesign/RP2040-examples/button/button_timer_db/build/release/CMakeFiles /home/agr/EmbeddedDesign/RP2040-examples/button/button_timer_db/build/release//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/agr/EmbeddedDesign/RP2040/mes_pico_project/button/button_timer_db/build/release/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/agr/EmbeddedDesign/RP2040-examples/button/button_timer_db/build/release/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -221,6 +221,19 @@ blinky/fast:
 .PHONY : blinky/fast
 
 #=============================================================================
+# Target rules for targets named led
+
+# Build rule for target.
+led: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 led
+.PHONY : led
+
+# fast build rule for target.
+led/fast:
+	$(MAKE) $(MAKESILENT) -f src/lib/led/CMakeFiles/led.dir/build.make src/lib/led/CMakeFiles/led.dir/build
+.PHONY : led/fast
+
+#=============================================================================
 # Target rules for targets named button
 
 # Build rule for target.
@@ -234,17 +247,17 @@ button/fast:
 .PHONY : button/fast
 
 #=============================================================================
-# Target rules for targets named led
+# Target rules for targets named timer
 
 # Build rule for target.
-led: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 led
-.PHONY : led
+timer: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 timer
+.PHONY : timer
 
 # fast build rule for target.
-led/fast:
-	$(MAKE) $(MAKESILENT) -f src/lib/led/CMakeFiles/led.dir/build.make src/lib/led/CMakeFiles/led.dir/build
-.PHONY : led/fast
+timer/fast:
+	$(MAKE) $(MAKESILENT) -f src/lib/timer/CMakeFiles/timer.dir/build.make src/lib/timer/CMakeFiles/timer.dir/build
+.PHONY : timer/fast
 
 # Help Target
 help:
@@ -264,6 +277,7 @@ help:
 	@echo "... button"
 	@echo "... button_poc"
 	@echo "... led"
+	@echo "... timer"
 .PHONY : help
 
 

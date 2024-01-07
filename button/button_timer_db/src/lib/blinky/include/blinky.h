@@ -7,11 +7,13 @@
 #include "pico/stdlib.h"
 
 #include "led.h"
+#include "button.h"
 #include "timer.h"
 
 typedef struct BLINKY_VAR {
 
     LED_VAR     led_var;
+    BUTTON_VAR  button_var;
     TIMER_VAR   timer_var;
 
 } BLINKY_VAR;

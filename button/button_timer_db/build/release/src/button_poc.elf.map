@@ -2,9 +2,11 @@ Archive member included to satisfy reference by file (symbol)
 
 lib/blinky/libblinky.a(blinky.c.obj)
                               CMakeFiles/button_poc.dir/main.c.obj (blinky_init)
+lib/led/libled.a(led.c.obj)   lib/blinky/libblinky.a(blinky.c.obj) (led_init)
 lib/button/libbutton.a(button.c.obj)
                               lib/blinky/libblinky.a(blinky.c.obj) (button_init)
-lib/led/libled.a(led.c.obj)   lib/blinky/libblinky.a(blinky.c.obj) (led_init)
+lib/timer/libtimer.a(timer.c.obj)
+                              lib/blinky/libblinky.a(blinky.c.obj) (timer_init)
 /usr/lib/gcc/arm-none-eabi/13.2.0/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
                               CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/pico_divider/divider.S.obj (__aeabi_idiv0)
 /usr/lib/gcc/arm-none-eabi/13.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-atexit.o)
@@ -114,8 +116,6 @@ Discarded input sections
  .text          0x00000000        0x0 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
  .data          0x00000000        0x0 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
  .bss           0x00000000        0x0 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
- .text.gpio_default_irq_handler
-                0x00000000      0x24c CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
  .text.gpio_get_pad
                 0x00000000       0x28 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
  .text.gpio_get_function
@@ -138,10 +138,6 @@ Discarded input sections
                 0x00000000       0x20 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
  .text.gpio_get_drive_strength
                 0x00000000       0x14 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
- .text.gpio_set_irq_enabled
-                0x00000000       0x54 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
- .text.gpio_set_irq_enabled_with_callback
-                0x00000000       0xc4 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
  .text.gpio_set_irq_callback
                 0x00000000       0x40 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
  .text.gpio_add_raw_irq_handler_with_order_priority_masked
@@ -162,10 +158,6 @@ Discarded input sections
                 0x00000000       0x30 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
  .text.gpio_init_mask
                 0x00000000       0x68 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
- .bss.raw_irq_mask
-                0x00000000        0x8 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
- .bss.callbacks
-                0x00000000        0x8 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
  .text          0x00000000        0x0 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
  .data          0x00000000        0x0 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
  .bss           0x00000000        0x0 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
@@ -217,8 +209,6 @@ Discarded input sections
                 0x00000000       0x2c CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
  .text.irq_get_exclusive_handler
                 0x00000000       0x50 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
- .text.irq_add_shared_handler
-                0x00000000      0x1f4 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
  .text.irq_set_priority
                 0x00000000       0x28 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
  .text.irq_get_priority
@@ -306,8 +296,6 @@ Discarded input sections
  .text          0x00000000        0x0 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/common/pico_time/time.c.obj
  .data          0x00000000        0x0 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/common/pico_time/time.c.obj
  .bss           0x00000000        0x0 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/common/pico_time/time.c.obj
- .text.repeating_timer_callback
-                0x00000000       0x1c CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/common/pico_time/time.c.obj
  .rodata.alarm_pool_dump_key.str1.4
                 0x00000000        0xf CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/common/pico_time/time.c.obj
  .text.alarm_pool_dump_key
@@ -326,8 +314,6 @@ Discarded input sections
                 0x00000000        0x4 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/common/pico_time/time.c.obj
  .text.alarm_pool_core_num
                 0x00000000        0x4 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/common/pico_time/time.c.obj
- .text.alarm_pool_add_repeating_timer_us
-                0x00000000      0x210 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/common/pico_time/time.c.obj
  .text.cancel_repeating_timer
                 0x00000000       0x84 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/common/pico_time/time.c.obj
  .text.alarm_pool_dump
@@ -1025,9 +1011,6 @@ Discarded input sections
  .text          0x00000000        0x0 lib/blinky/libblinky.a(blinky.c.obj)
  .data          0x00000000        0x0 lib/blinky/libblinky.a(blinky.c.obj)
  .bss           0x00000000        0x0 lib/blinky/libblinky.a(blinky.c.obj)
- .text          0x00000000        0x0 lib/button/libbutton.a(button.c.obj)
- .data          0x00000000        0x0 lib/button/libbutton.a(button.c.obj)
- .bss           0x00000000        0x0 lib/button/libbutton.a(button.c.obj)
  .text          0x00000000        0x0 lib/led/libled.a(led.c.obj)
  .data          0x00000000        0x0 lib/led/libled.a(led.c.obj)
  .bss           0x00000000        0x0 lib/led/libled.a(led.c.obj)
@@ -1035,9 +1018,17 @@ Discarded input sections
  .text.led_off  0x00000000        0xc lib/led/libled.a(led.c.obj)
  .text.led_blink
                 0x00000000       0x1c lib/led/libled.a(led.c.obj)
- .text          0x00000000        0x0 /tmp/ccB4mJVs.o
- .data          0x00000000        0x0 /tmp/ccB4mJVs.o
- .bss           0x00000000        0x0 /tmp/ccB4mJVs.o
+ .text          0x00000000        0x0 lib/button/libbutton.a(button.c.obj)
+ .data          0x00000000        0x0 lib/button/libbutton.a(button.c.obj)
+ .bss           0x00000000        0x0 lib/button/libbutton.a(button.c.obj)
+ .text          0x00000000        0x0 lib/timer/libtimer.a(timer.c.obj)
+ .data          0x00000000        0x0 lib/timer/libtimer.a(timer.c.obj)
+ .bss           0x00000000        0x0 lib/timer/libtimer.a(timer.c.obj)
+ .text.timer_reset
+                0x00000000        0x4 lib/timer/libtimer.a(timer.c.obj)
+ .text          0x00000000        0x0 /tmp/ccxLFpfV.o
+ .data          0x00000000        0x0 /tmp/ccxLFpfV.o
+ .bss           0x00000000        0x0 /tmp/ccxLFpfV.o
  .data          0x00000000        0x0 /usr/lib/gcc/arm-none-eabi/13.2.0/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
  .bss           0x00000000        0x0 /usr/lib/gcc/arm-none-eabi/13.2.0/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
  .text          0x00000000        0x0 /usr/lib/gcc/arm-none-eabi/13.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-atexit.o)
@@ -1621,11 +1612,11 @@ LOAD /usr/lib/gcc/arm-none-eabi/13.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/
 .boot2          0x10000000      0x100
                 0x10000000                        __boot2_start__ = .
  *(.boot2)
- .boot2         0x10000000      0x100 /tmp/ccB4mJVs.o
+ .boot2         0x10000000      0x100 /tmp/ccxLFpfV.o
                 0x10000100                        __boot2_end__ = .
                 0x00000001                        ASSERT (((__boot2_end__ - __boot2_start__) == 0x100), ERROR: Pico second stage bootloader must be 256 bytes in size)
 
-.text           0x10000100     0x2338
+.text           0x10000100     0x2a78
                 0x10000100                        __logical_binary_start = .
  *(.vectors)
  .vectors       0x10000100       0xd4 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
@@ -1690,257 +1681,282 @@ LOAD /usr/lib/gcc/arm-none-eabi/13.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/
  .text.startup.main
                 0x100002dc       0x38 CMakeFiles/button_poc.dir/main.c.obj
                 0x100002dc                main
+ .text.gpio_default_irq_handler
+                0x10000314      0x24c CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
  .text.gpio_set_function
-                0x10000314       0x30 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
-                0x10000314                gpio_set_function
+                0x10000560       0x30 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
+                0x10000560                gpio_set_function
  .text.gpio_set_pulls
-                0x10000344       0x24 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
-                0x10000344                gpio_set_pulls
+                0x10000590       0x24 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
+                0x10000590                gpio_set_pulls
  .text.gpio_set_input_hysteresis_enabled
-                0x10000368       0x28 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
-                0x10000368                gpio_set_input_hysteresis_enabled
+                0x100005b4       0x28 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
+                0x100005b4                gpio_set_input_hysteresis_enabled
+ .text.gpio_set_irq_enabled
+                0x100005dc       0x54 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
+                0x100005dc                gpio_set_irq_enabled
+ .text.gpio_set_irq_enabled_with_callback
+                0x10000630       0xc4 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
+                0x10000630                gpio_set_irq_enabled_with_callback
  .text.gpio_init
-                0x10000390       0x3c CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
-                0x10000390                gpio_init
+                0x100006f4       0x3c CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
+                0x100006f4                gpio_init
  .text.running_on_fpga
-                0x100003cc       0x10 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
-                0x100003cc                running_on_fpga
+                0x10000730       0x10 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
+                0x10000730                running_on_fpga
  .text.hw_claim_or_assert
-                0x100003dc       0x44 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
-                0x100003dc                hw_claim_or_assert
+                0x10000740       0x44 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
+                0x10000740                hw_claim_or_assert
  .text.spin_locks_reset
-                0x10000420       0x1c CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
-                0x10000420                spin_locks_reset
+                0x10000784       0x1c CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
+                0x10000784                spin_locks_reset
  .text.next_striped_spin_lock_num
-                0x1000043c       0x18 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
-                0x1000043c                next_striped_spin_lock_num
+                0x100007a0       0x18 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
+                0x100007a0                next_striped_spin_lock_num
  .text.irq_set_enabled
-                0x10000454       0x24 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x10000454                irq_set_enabled
+                0x100007b8       0x24 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x100007b8                irq_set_enabled
  .text.irq_get_vtable_handler
-                0x10000478       0x10 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x10000478                irq_get_vtable_handler
+                0x100007dc       0x10 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x100007dc                irq_get_vtable_handler
  .text.irq_set_exclusive_handler
-                0x10000488       0x54 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x10000488                irq_set_exclusive_handler
+                0x100007ec       0x54 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x100007ec                irq_set_exclusive_handler
+ .text.irq_add_shared_handler
+                0x10000840      0x1f4 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x10000840                irq_add_shared_handler
  .text.irq_remove_handler
-                0x100004dc      0x1c4 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x100004dc                irq_remove_handler
+                0x10000a34      0x1c4 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x10000a34                irq_remove_handler
  .text.irq_add_tail_to_free_list
-                0x100006a0       0xb4 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x100006a0                irq_add_tail_to_free_list
+                0x10000bf8       0xb4 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x10000bf8                irq_add_tail_to_free_list
  .text.irq_init_priorities
-                0x10000754       0x24 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x10000754                irq_init_priorities
+                0x10000cac       0x24 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x10000cac                irq_init_priorities
  .text.lock_init
-                0x10000778       0x10 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/common/pico_sync/lock_core.c.obj
-                0x10000778                lock_init
+                0x10000cd0       0x10 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/common/pico_sync/lock_core.c.obj
+                0x10000cd0                lock_init
  .text.mutex_init
-                0x10000788       0x1c CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/common/pico_sync/mutex.c.obj
-                0x10000788                mutex_init
+                0x10000ce0       0x1c CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/common/pico_sync/mutex.c.obj
+                0x10000ce0                mutex_init
  .text.recursive_mutex_init
-                0x100007a4       0x1c CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/common/pico_sync/mutex.c.obj
-                0x100007a4                recursive_mutex_init
+                0x10000cfc       0x1c CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/common/pico_sync/mutex.c.obj
+                0x10000cfc                recursive_mutex_init
  .text.timer_pool_entry_comparator
-                0x100007c0       0x34 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/common/pico_time/time.c.obj
-                0x100007c0                timer_pool_entry_comparator
+                0x10000d18       0x34 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/common/pico_time/time.c.obj
+                0x10000d18                timer_pool_entry_comparator
+ .text.repeating_timer_callback
+                0x10000d4c       0x1c CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/common/pico_time/time.c.obj
  .text.sleep_until_callback
-                0x100007f4       0x30 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/common/pico_time/time.c.obj
+                0x10000d68       0x30 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/common/pico_time/time.c.obj
  .text.add_alarm_under_lock.isra.0
-                0x10000824      0x100 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/common/pico_time/time.c.obj
+                0x10000d98      0x100 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/common/pico_time/time.c.obj
  .text.alarm_pool_alarm_callback
-                0x10000924      0x1c0 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/common/pico_time/time.c.obj
+                0x10000e98      0x1c0 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/common/pico_time/time.c.obj
  .text.alarm_pool_init_default
-                0x10000ae4       0x6c CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/common/pico_time/time.c.obj
-                0x10000ae4                alarm_pool_init_default
+                0x10001058       0x6c CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/common/pico_time/time.c.obj
+                0x10001058                alarm_pool_init_default
  .text.alarm_pool_get_default
-                0x10000b50        0x8 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/common/pico_time/time.c.obj
-                0x10000b50                alarm_pool_get_default
+                0x100010c4        0x8 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/common/pico_time/time.c.obj
+                0x100010c4                alarm_pool_get_default
  .text.alarm_pool_add_alarm_at
-                0x10000b58      0x17c CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/common/pico_time/time.c.obj
-                0x10000b58                alarm_pool_add_alarm_at
+                0x100010cc      0x17c CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/common/pico_time/time.c.obj
+                0x100010cc                alarm_pool_add_alarm_at
+ .text.alarm_pool_add_repeating_timer_us
+                0x10001248      0x210 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/common/pico_time/time.c.obj
+                0x10001248                alarm_pool_add_repeating_timer_us
  .text.best_effort_wfe_or_timeout
-                0x10000cd4       0xcc CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/common/pico_time/time.c.obj
-                0x10000cd4                best_effort_wfe_or_timeout
+                0x10001458       0xcc CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/common/pico_time/time.c.obj
+                0x10001458                best_effort_wfe_or_timeout
  .text.hardware_alarm_irq_handler
-                0x10000da0       0xbc CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x10001524       0xbc CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
  .text.hardware_alarm_claim
-                0x10000e5c       0x18 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-                0x10000e5c                hardware_alarm_claim
+                0x100015e0       0x18 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x100015e0                hardware_alarm_claim
  .text.time_us_64
-                0x10000e74       0x14 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-                0x10000e74                time_us_64
+                0x100015f8       0x14 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x100015f8                time_us_64
  .text.busy_wait_us
-                0x10000e88       0x68 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-                0x10000e88                busy_wait_us
+                0x1000160c       0x68 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x1000160c                busy_wait_us
  .text.hardware_alarm_set_callback
-                0x10000ef0       0x8c CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-                0x10000ef0                hardware_alarm_set_callback
+                0x10001674       0x8c CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x10001674                hardware_alarm_set_callback
  .text.hardware_alarm_set_target
-                0x10000f7c       0xd0 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-                0x10000f7c                hardware_alarm_set_target
+                0x10001700       0xd0 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x10001700                hardware_alarm_set_target
  .text.hardware_alarm_cancel
-                0x1000104c       0x3c CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-                0x1000104c                hardware_alarm_cancel
+                0x100017d0       0x3c CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x100017d0                hardware_alarm_cancel
  .text.ph_merge_nodes
-                0x10001088       0x58 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x1000180c       0x58 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/common/pico_util/pheap.c.obj
  .text.ph_post_alloc_init
-                0x100010e0       0x3c CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/common/pico_util/pheap.c.obj
-                0x100010e0                ph_post_alloc_init
+                0x10001864       0x3c CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x10001864                ph_post_alloc_init
  .text.ph_merge_two_pass
-                0x1000111c       0x8c CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/common/pico_util/pheap.c.obj
-                0x1000111c                ph_merge_two_pass
+                0x100018a0       0x8c CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x100018a0                ph_merge_two_pass
  .text.ph_remove_any_head
-                0x100011a8      0x100 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x1000192c      0x100 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/common/pico_util/pheap.c.obj
  .text.ph_remove_head
-                0x100012a8      0x104 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/common/pico_util/pheap.c.obj
-                0x100012a8                ph_remove_head
+                0x10001a2c      0x104 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x10001a2c                ph_remove_head
  .text.ph_remove_and_free_node
-                0x100013ac       0x78 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/common/pico_util/pheap.c.obj
-                0x100013ac                ph_remove_and_free_node
+                0x10001b30       0x78 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x10001b30                ph_remove_and_free_node
  .text.uart_init
-                0x10001424      0x18c CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
-                0x10001424                uart_init
+                0x10001ba8      0x18c CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
+                0x10001ba8                uart_init
  .text.clocks_init
-                0x100015b0      0x2c8 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
-                0x100015b0                clocks_init
+                0x10001d34      0x2c8 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
+                0x10001d34                clocks_init
  .text.clock_get_hz
-                0x10001878        0xc CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
-                0x10001878                clock_get_hz
+                0x10001ffc        0xc CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
+                0x10001ffc                clock_get_hz
  .text.pll_init
-                0x10001884       0xa4 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
-                0x10001884                pll_init
+                0x10002008       0xa4 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
+                0x10002008                pll_init
  .text.watchdog_start_tick
-                0x10001928       0x10 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
-                0x10001928                watchdog_start_tick
+                0x100020ac       0x10 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
+                0x100020ac                watchdog_start_tick
  .text.xosc_init
-                0x10001938       0x28 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
-                0x10001938                xosc_init
+                0x100020bc       0x28 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
+                0x100020bc                xosc_init
  .text.runtime_init
-                0x10001960       0xf0 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
-                0x10001960                runtime_init
- .text._exit    0x10001a50        0x4 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
-                0x10001a50                _exit
- .text.exit     0x10001a54        0x8 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
-                0x10001a54                exit
- .text.panic    0x10001a5c       0x30 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
-                0x10001a5c                panic
+                0x100020e4       0xf0 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x100020e4                runtime_init
+ .text._exit    0x100021d4        0x4 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x100021d4                _exit
+ .text.exit     0x100021d8        0x8 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x100021d8                exit
+ .text.panic    0x100021e0       0x30 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x100021e0                panic
  .text.hard_assertion_failure
-                0x10001a8c        0xc CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
-                0x10001a8c                hard_assertion_failure
+                0x10002210        0xc CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x10002210                hard_assertion_failure
  .text._out_char
-                0x10001a98       0x10 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x1000221c       0x10 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .text.weak_raw_vprintf
-                0x10001aa8       0x30 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
-                0x10001aa8                weak_raw_vprintf
- .text          0x10001ad8       0x10 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
+                0x1000222c       0x30 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x1000222c                weak_raw_vprintf
+ .text          0x1000225c       0x10 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
  .text.rom_func_lookup
-                0x10001ae8       0x10 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
-                0x10001ae8                rom_func_lookup
+                0x1000226c       0x10 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
+                0x1000226c                rom_func_lookup
  .text.rom_data_lookup
-                0x10001af8       0x10 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
-                0x10001af8                rom_data_lookup
+                0x1000227c       0x10 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
+                0x1000227c                rom_data_lookup
  .text.rom_funcs_lookup
-                0x10001b08       0x44 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
-                0x10001b08                rom_funcs_lookup
+                0x1000228c       0x44 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
+                0x1000228c                rom_funcs_lookup
  .text.__wrap___aeabi_uidiv
-                0x10001b4c       0x4c CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
-                0x10001b4c                __wrap___aeabi_uidiv
-                0x10001b4c                __wrap___aeabi_uidivmod
-                0x10001b4c                div_u32u32
-                0x10001b4c                divmod_u32u32
-                0x10001b54                divmod_u32u32_unsafe
-                0x10001b7c                divmod_u32u32_savestate
+                0x100022d0       0x4c CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
+                0x100022d0                __wrap___aeabi_uidiv
+                0x100022d0                __wrap___aeabi_uidivmod
+                0x100022d0                div_u32u32
+                0x100022d0                divmod_u32u32
+                0x100022d8                divmod_u32u32_unsafe
+                0x10002300                divmod_u32u32_savestate
  .text.missing_double_func_shim
-                0x10001b98        0xc CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
+                0x1000231c        0xc CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
  .text.__aeabi_double_init
-                0x10001ba4       0x94 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
-                0x10001ba4                __aeabi_double_init
+                0x10002328       0x94 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
+                0x10002328                __aeabi_double_init
  .text.double_table_shim_on_use_helper
-                0x10001c38       0x2c CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
-                0x10001c38                double_table_shim_on_use_helper
+                0x100023bc       0x2c CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x100023bc                double_table_shim_on_use_helper
  .text.__aeabi_lmul
-                0x10001c64       0x32 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
-                0x10001c64                __wrap___aeabi_lmul
- *fill*         0x10001c96        0x2 
+                0x100023e8       0x32 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
+                0x100023e8                __wrap___aeabi_lmul
+ *fill*         0x1000241a        0x2 
  .text.missing_float_func_shim
-                0x10001c98        0xc CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
+                0x1000241c        0xc CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
  .text.__aeabi_float_init
-                0x10001ca4       0x5c CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
-                0x10001ca4                __aeabi_float_init
- .text          0x10001d00       0x10 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
-                0x10001d00                __aeabi_mem_init
- .text.memset   0x10001d10        0xc CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
-                0x10001d10                __wrap_memset
- .text.memcpy   0x10001d1c        0xc CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
-                0x10001d1c                __wrap___aeabi_memcpy
-                0x10001d1c                __wrap_memcpy
+                0x10002428       0x5c CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
+                0x10002428                __aeabi_float_init
+ .text          0x10002484       0x10 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
+                0x10002484                __aeabi_mem_init
+ .text.memset   0x10002494        0xc CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
+                0x10002494                __wrap_memset
+ .text.memcpy   0x100024a0        0xc CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
+                0x100024a0                __wrap___aeabi_memcpy
+                0x100024a0                __wrap_memcpy
  .text.stdio_out_chars_crlf
-                0x10001d28       0x94 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x100024ac       0x94 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
  .text.__wrap_putchar
-                0x10001dbc       0x98 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
-                0x10001dbc                __wrap_putchar
+                0x10002540       0x98 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x10002540                __wrap_putchar
  .text.__wrap_puts
-                0x10001e54       0xe0 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
-                0x10001e54                __wrap_puts
+                0x100025d8       0xe0 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x100025d8                __wrap_puts
  .text.stdio_set_driver_enabled
-                0x10001f34       0x30 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
-                0x10001f34                stdio_set_driver_enabled
+                0x100026b8       0x30 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x100026b8                stdio_set_driver_enabled
  .text.stdio_init_all
-                0x10001f64        0xc CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
-                0x10001f64                stdio_init_all
+                0x100026e8        0xc CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x100026e8                stdio_init_all
  .text.stdio_uart_out_chars
-                0x10001f70       0x4c CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+                0x100026f4       0x4c CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
  .text.stdio_uart_in_chars
-                0x10001fbc       0x90 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
-                0x10001fbc                stdio_uart_in_chars
+                0x10002740       0x90 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+                0x10002740                stdio_uart_in_chars
  .text.on_uart_rx
-                0x1000204c       0x28 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+                0x100027d0       0x28 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
  .text.stdio_uart_set_chars_available_callback
-                0x10002074       0x8c CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+                0x100027f8       0x8c CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
  .text.stdio_uart_init
-                0x10002100       0x48 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
-                0x10002100                stdio_uart_init
- .text.blinky_callback
-                0x10002148       0x48 lib/blinky/libblinky.a(blinky.c.obj)
-                0x10002148                blinky_callback
+                0x10002884       0x48 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+                0x10002884                stdio_uart_init
+ .text.blinky_irs_callback
+                0x100028cc       0x18 lib/blinky/libblinky.a(blinky.c.obj)
+                0x100028cc                blinky_irs_callback
+ .text.blinky_timer_callback
+                0x100028e4        0xc lib/blinky/libblinky.a(blinky.c.obj)
+                0x100028e4                blinky_timer_callback
  .text.blinky_init
-                0x10002190       0x28 lib/blinky/libblinky.a(blinky.c.obj)
-                0x10002190                blinky_init
+                0x100028f0       0x2c lib/blinky/libblinky.a(blinky.c.obj)
+                0x100028f0                blinky_init
  .text.blinky_loop
-                0x100021b8       0x7c lib/blinky/libblinky.a(blinky.c.obj)
-                0x100021b8                blinky_loop
- .text.button_init
-                0x10002234       0x30 lib/button/libbutton.a(button.c.obj)
-                0x10002234                button_init
+                0x1000291c        0x4 lib/blinky/libblinky.a(blinky.c.obj)
+                0x1000291c                blinky_loop
  .text.led_init
-                0x10002264       0x20 lib/led/libled.a(led.c.obj)
-                0x10002264                led_init
+                0x10002920       0x20 lib/led/libled.a(led.c.obj)
+                0x10002920                led_init
  .text.led_toggle
-                0x10002284       0x24 lib/led/libled.a(led.c.obj)
-                0x10002284                led_toggle
- .text.atexit   0x100022a8       0x10 /usr/lib/gcc/arm-none-eabi/13.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-atexit.o)
-                0x100022a8                atexit
+                0x10002940       0x24 lib/led/libled.a(led.c.obj)
+                0x10002940                led_toggle
+ .text.button_init
+                0x10002964       0x3c lib/button/libbutton.a(button.c.obj)
+                0x10002964                button_init
+ .text.timer_init
+                0x100029a0        0xc lib/timer/libtimer.a(timer.c.obj)
+                0x100029a0                timer_init
+ .text.timer_start
+                0x100029ac       0x3c lib/timer/libtimer.a(timer.c.obj)
+                0x100029ac                timer_start
+ .text.atexit   0x100029e8       0x10 /usr/lib/gcc/arm-none-eabi/13.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-atexit.o)
+                0x100029e8                atexit
  .text.__libc_fini_array
-                0x100022b8       0x28 /usr/lib/gcc/arm-none-eabi/13.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-fini.o)
-                0x100022b8                __libc_fini_array
+                0x100029f8       0x28 /usr/lib/gcc/arm-none-eabi/13.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-fini.o)
+                0x100029f8                __libc_fini_array
  .text.__retarget_lock_acquire_recursive
-                0x100022e0        0x4 /usr/lib/gcc/arm-none-eabi/13.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-lock.o)
-                0x100022e0                __retarget_lock_acquire_recursive
+                0x10002a20        0x4 /usr/lib/gcc/arm-none-eabi/13.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-lock.o)
+                0x10002a20                __retarget_lock_acquire_recursive
  .text.__retarget_lock_release_recursive
-                0x100022e4        0x4 /usr/lib/gcc/arm-none-eabi/13.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-lock.o)
-                0x100022e4                __retarget_lock_release_recursive
- .text.strlen   0x100022e8       0x5c /usr/lib/gcc/arm-none-eabi/13.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-strlen-stub.o)
-                0x100022e8                strlen
+                0x10002a24        0x4 /usr/lib/gcc/arm-none-eabi/13.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-lock.o)
+                0x10002a24                __retarget_lock_release_recursive
+ .text.strlen   0x10002a28       0x5c /usr/lib/gcc/arm-none-eabi/13.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-strlen-stub.o)
+                0x10002a28                strlen
  .text.__register_exitproc
-                0x10002344       0xa8 /usr/lib/gcc/arm-none-eabi/13.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-__atexit.o)
-                0x10002344                __register_exitproc
+                0x10002a84       0xa8 /usr/lib/gcc/arm-none-eabi/13.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-__atexit.o)
+                0x10002a84                __register_exitproc
  .text.startup.register_fini
-                0x100023ec       0x18 /usr/lib/gcc/arm-none-eabi/13.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-__call_atexit.o)
+                0x10002b2c       0x18 /usr/lib/gcc/arm-none-eabi/13.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-__call_atexit.o)
  *(.fini)
- .fini          0x10002404        0x4 /usr/lib/gcc/arm-none-eabi/13.2.0/thumb/v6-m/nofp/crti.o
-                0x10002404                _fini
- .fini.__stub   0x10002408       0x30 linker stubs
+ .fini          0x10002b44        0x4 /usr/lib/gcc/arm-none-eabi/13.2.0/thumb/v6-m/nofp/crti.o
+                0x10002b44                _fini
+ .fini.__stub   0x10002b48       0x30 linker stubs
  *crtbegin.o(.ctors)
  *crtbegin?.o(.ctors)
  *(EXCLUDE_FILE(*crtend.o *crtend?.o) .ctors)
@@ -1952,94 +1968,94 @@ LOAD /usr/lib/gcc/arm-none-eabi/13.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/
  *(SORT_BY_NAME(.dtors.*))
  *(.dtors)
  *(.eh_frame*)
- .eh_frame      0x10002438        0x0 /usr/lib/gcc/arm-none-eabi/13.2.0/thumb/v6-m/nofp/crtbegin.o
-                0x10002438                        . = ALIGN (0x4)
+ .eh_frame      0x10002b78        0x0 /usr/lib/gcc/arm-none-eabi/13.2.0/thumb/v6-m/nofp/crtbegin.o
+                0x10002b78                        . = ALIGN (0x4)
 
-.glue_7         0x10002438        0x0
- .glue_7        0x10002438        0x0 linker stubs
+.glue_7         0x10002b78        0x0
+ .glue_7        0x10002b78        0x0 linker stubs
 
-.glue_7t        0x10002438        0x0
- .glue_7t       0x10002438        0x0 linker stubs
+.glue_7t        0x10002b78        0x0
+ .glue_7t       0x10002b78        0x0 linker stubs
 
-.vfp11_veneer   0x10002438        0x0
- .vfp11_veneer  0x10002438        0x0 linker stubs
+.vfp11_veneer   0x10002b78        0x0
+ .vfp11_veneer  0x10002b78        0x0 linker stubs
 
-.v4_bx          0x10002438        0x0
- .v4_bx         0x10002438        0x0 linker stubs
+.v4_bx          0x10002b78        0x0
+ .v4_bx         0x10002b78        0x0 linker stubs
 
-.iplt           0x10002438        0x0
- .iplt          0x10002438        0x0 /usr/lib/gcc/arm-none-eabi/13.2.0/thumb/v6-m/nofp/crtbegin.o
+.iplt           0x10002b78        0x0
+ .iplt          0x10002b78        0x0 /usr/lib/gcc/arm-none-eabi/13.2.0/thumb/v6-m/nofp/crtbegin.o
 
-.rodata         0x10002438      0x11c
+.rodata         0x10002b78      0x11c
  *(EXCLUDE_FILE(*libm.a: *libc.a:*lib_a-mem*.o *libgcc.a:) .rodata*)
  .rodata.hardware_alarm_claim.str1.4
-                0x10002438       0xe0 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x10002b78       0xe0 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
                                  0x22 (size before relaxing)
  .rodata.panic.str1.4
-                0x10002518       0x12 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x10002c58       0x12 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
  .rodata.hard_assertion_failure.str1.4
-                0x10002518        0xc CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x10002c58        0xc CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
  .rodata.missing_double_func_shim.str1.4
-                0x10002518       0x18 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
+                0x10002c58       0x18 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
  .rodata.missing_float_func_shim.str1.4
-                0x10002518        0x1 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
+                0x10002c58        0x1 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
  .rodata.str1.4
-                0x10002518       0x54 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x10002c58       0x54 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .rodata.__bi_81
-                0x10002518        0xc CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x10002c58        0xc CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .rodata.__bi_75
-                0x10002524        0xc CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x10002c64        0xc CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .rodata.__bi_44
-                0x10002530        0xc CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x10002c70        0xc CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .rodata.crlf_str.0
-                0x1000253c        0x2 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x10002c7c        0x2 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
  .rodata.str1.4
-                0x1000253e       0x2c CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
- *fill*         0x1000253e        0x2 
+                0x10002c7e       0x2c CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+ *fill*         0x10002c7e        0x2 
  .rodata.__bi_33.4
-                0x10002540        0xc CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+                0x10002c80        0xc CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
  .rodata.__bi_34.5
-                0x1000254c        0x8 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
-                0x10002554                        . = ALIGN (0x4)
+                0x10002c8c        0x8 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+                0x10002c94                        . = ALIGN (0x4)
  *(SORT_BY_ALIGNMENT(SORT_BY_NAME(.flashdata*)))
-                0x10002554                        . = ALIGN (0x4)
+                0x10002c94                        . = ALIGN (0x4)
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x10002554                        __exidx_start = .
+                0x10002c94                        __exidx_start = .
 
 .ARM.exidx
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
-                0x10002554                        __exidx_end = .
-                0x10002554                        . = ALIGN (0x4)
-                0x10002554                        __binary_info_start = .
+                0x10002c94                        __exidx_end = .
+                0x10002c94                        . = ALIGN (0x4)
+                0x10002c94                        __binary_info_start = .
 
-.binary_info    0x10002554       0x24
+.binary_info    0x10002c94       0x24
  *(.binary_info.keep.*)
  .binary_info.keep.__bi_ptr81
-                0x10002554        0x4 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x10002c94        0x4 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr75
-                0x10002558        0x4 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x10002c98        0x4 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr50
-                0x1000255c        0x4 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x10002c9c        0x4 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr44
-                0x10002560        0x4 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x10002ca0        0x4 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr38
-                0x10002564        0x4 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x10002ca4        0x4 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr30
-                0x10002568        0x4 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x10002ca8        0x4 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr22
-                0x1000256c        0x4 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x10002cac        0x4 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  *(.binary_info.*)
  .binary_info.__bi_ptr34
-                0x10002570        0x4 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+                0x10002cb0        0x4 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
  .binary_info.__bi_ptr33
-                0x10002574        0x4 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
-                0x10002578                        __binary_info_end = .
+                0x10002cb4        0x4 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+                0x10002cb8                        __binary_info_end = .
 
-.rel.dyn        0x10002578        0x0
- .rel.iplt      0x10002578        0x0 /usr/lib/gcc/arm-none-eabi/13.2.0/thumb/v6-m/nofp/crtbegin.o
-                0x10002578                        . = ALIGN (0x4)
+.rel.dyn        0x10002cb8        0x0
+ .rel.iplt      0x10002cb8        0x0 /usr/lib/gcc/arm-none-eabi/13.2.0/thumb/v6-m/nofp/crtbegin.o
+                0x10002cb8                        . = ALIGN (0x4)
 
 .ram_vector_table
                 0x20000000       0xc0
@@ -2048,7 +2064,7 @@ LOAD /usr/lib/gcc/arm-none-eabi/13.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/
                 0x20000000       0xc0 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
                 0x20000000                ram_vector_table
 
-.data           0x200000c0      0x1ac load address 0x10002578
+.data           0x200000c0      0x1ac load address 0x10002cb8
                 0x200000c0                        __data_start__ = .
  *(vtable)
  *(.time_critical*)
@@ -2130,31 +2146,31 @@ LOAD /usr/lib/gcc/arm-none-eabi/13.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/
  *(.jcr)
                 0x2000026c                        . = ALIGN (0x4)
                 0x2000026c                        __data_end__ = .
-                0x10002578                        __etext = LOADADDR (.data)
+                0x10002cb8                        __etext = LOADADDR (.data)
 
-.igot.plt       0x2000026c        0x0 load address 0x10002724
+.igot.plt       0x2000026c        0x0 load address 0x10002e64
  .igot.plt      0x2000026c        0x0 /usr/lib/gcc/arm-none-eabi/13.2.0/thumb/v6-m/nofp/crtbegin.o
 
 .uninitialized_data
-                0x2000026c        0x0 load address 0x10002724
+                0x2000026c        0x0 load address 0x10002e64
                 0x2000026c                        . = ALIGN (0x4)
  *(.uninitialized_data*)
 
-.scratch_x      0x20040000        0x0 load address 0x10002724
+.scratch_x      0x20040000        0x0 load address 0x10002e64
                 0x20040000                        __scratch_x_start__ = .
  *(.scratch_x.*)
                 0x20040000                        . = ALIGN (0x4)
                 0x20040000                        __scratch_x_end__ = .
-                0x10002724                        __scratch_x_source__ = LOADADDR (.scratch_x)
+                0x10002e64                        __scratch_x_source__ = LOADADDR (.scratch_x)
 
-.scratch_y      0x20041000        0x0 load address 0x10002724
+.scratch_y      0x20041000        0x0 load address 0x10002e64
                 0x20041000                        __scratch_y_start__ = .
  *(.scratch_y.*)
                 0x20041000                        . = ALIGN (0x4)
                 0x20041000                        __scratch_y_end__ = .
-                0x10002724                        __scratch_y_source__ = LOADADDR (.scratch_y)
+                0x10002e64                        __scratch_y_source__ = LOADADDR (.scratch_y)
 
-.bss            0x20000270      0x570
+.bss            0x20000270      0x584
                 0x20000270                        . = ALIGN (0x4)
                 0x20000270                        __bss_start__ = .
  *(SORT_BY_ALIGNMENT(SORT_BY_NAME(.bss*)))
@@ -2175,52 +2191,59 @@ LOAD /usr/lib/gcc/arm-none-eabi/13.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/
  *fill*         0x2000062d        0x3 
  .bss.alarm_callbacks
                 0x20000630       0x10 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+ .bss.callbacks
+                0x20000640        0x8 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
  .bss.chars_available_callback
-                0x20000640        0x4 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+                0x20000648        0x4 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
  .bss.chars_available_param
-                0x20000644        0x4 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+                0x2000064c        0x4 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
  .bss.default_alarm_pool_entry_ids_high
-                0x20000648       0x10 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/common/pico_time/time.c.obj
+                0x20000650       0x10 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/common/pico_time/time.c.obj
  .bss.default_alarm_pool_heap_nodes
-                0x20000658       0x30 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/common/pico_time/time.c.obj
- .bss.drivers   0x20000688        0x4 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
- .bss.filter    0x2000068c        0x4 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x20000660       0x30 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/common/pico_time/time.c.obj
+ .bss.drivers   0x20000690        0x4 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+ .bss.filter    0x20000694        0x4 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
  .bss.lazy_vsnprintf
-                0x20000690        0x4 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
- .bss.object.0  0x20000694       0x18 /usr/lib/gcc/arm-none-eabi/13.2.0/thumb/v6-m/nofp/crtbegin.o
- .bss.pools     0x200006ac       0x10 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/common/pico_time/time.c.obj
+                0x20000698        0x4 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+ .bss.object.0  0x2000069c       0x18 /usr/lib/gcc/arm-none-eabi/13.2.0/thumb/v6-m/nofp/crtbegin.o
+ .bss.pools     0x200006b4       0x10 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/common/pico_time/time.c.obj
+ .bss.ptLocalTimerVar
+                0x200006c4        0x4 lib/timer/libtimer.a(timer.c.obj)
+                0x200006c4                ptLocalTimerVar
+ .bss.raw_irq_mask
+                0x200006c8        0x8 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
  .bss.sf_clz_func
-                0x200006bc        0x4 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
-                0x200006bc                sf_clz_func
- .bss.sf_table  0x200006c0      0x100 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
-                0x200006c0                sf_table
+                0x200006d0        0x4 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
+                0x200006d0                sf_clz_func
+ .bss.sf_table  0x200006d4      0x100 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
+                0x200006d4                sf_table
  .bss.sleep_notifier
-                0x200007c0        0x4 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/common/pico_time/time.c.obj
+                0x200007d4        0x4 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/common/pico_time/time.c.obj
  .bss.target_hi
-                0x200007c4       0x10 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x200007d8       0x10 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
  .bss.uart_char_to_line_feed
-                0x200007d4        0x4 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
-                0x200007d4                uart_char_to_line_feed
+                0x200007e8        0x4 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
+                0x200007e8                uart_char_to_line_feed
  .bss.uart_instance
-                0x200007d8        0x4 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+                0x200007ec        0x4 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
  .bss.chosen_led_pin
-                0x200007dc        0x1 lib/led/libled.a(led.c.obj)
-                0x200007dc                chosen_led_pin
- .bss.claimed   0x200007dd        0x1 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x200007f0        0x1 lib/led/libled.a(led.c.obj)
+                0x200007f0                chosen_led_pin
+ .bss.claimed   0x200007f1        0x1 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
  .bss.irq_hander_chain_free_slot_head
-                0x200007de        0x1 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x200007f2        0x1 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
  .bss.timer_callbacks_pending
-                0x200007df        0x1 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x200007f3        0x1 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
  *(COMMON)
-                0x200007e0                        . = ALIGN (0x4)
-                0x200007e0                        __bss_end__ = .
+                0x200007f4                        . = ALIGN (0x4)
+                0x200007f4                        __bss_end__ = .
 
-.heap           0x200007e0      0x800
-                0x200007e0                        __end__ = .
-                0x200007e0                        end = __end__
+.heap           0x200007f4      0x800
+                0x200007f4                        __end__ = .
+                0x200007f4                        end = __end__
  *(.heap*)
- .heap          0x200007e0      0x800 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
-                0x20000fe0                        __HeapLimit = .
+ .heap          0x200007f4      0x800 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
+                0x20000ff4                        __HeapLimit = .
 
 .stack1_dummy
  *(.stack1*)
@@ -2229,8 +2252,8 @@ LOAD /usr/lib/gcc/arm-none-eabi/13.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/
  *(.stack*)
  .stack         0x20041000      0x800 CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
 
-.flash_end      0x10002724        0x0
-                0x10002724                        PROVIDE (__flash_binary_end = .)
+.flash_end      0x10002e64        0x0
+                0x10002e64                        PROVIDE (__flash_binary_end = .)
                 0x20040000                        __StackLimit = (ORIGIN (RAM) + LENGTH (RAM))
                 0x20041000                        __StackOneTop = (ORIGIN (SCRATCH_X) + LENGTH (SCRATCH_X))
                 0x20042000                        __StackTop = (ORIGIN (SCRATCH_Y) + LENGTH (SCRATCH_Y))
@@ -2286,9 +2309,10 @@ LOAD CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_c
 LOAD CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
 LOAD CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
 LOAD lib/blinky/libblinky.a
-LOAD lib/button/libbutton.a
 LOAD lib/led/libled.a
-LOAD /tmp/ccB4mJVs.o
+LOAD lib/button/libbutton.a
+LOAD lib/timer/libtimer.a
+LOAD /tmp/ccxLFpfV.o
 LOAD /usr/lib/gcc/arm-none-eabi/13.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libstdc++.a
 LOAD /usr/lib/gcc/arm-none-eabi/13.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libm.a
 START GROUP
@@ -2380,25 +2404,27 @@ LOAD linker stubs
  .ARM.attributes
                 0x0000059c       0x2c lib/blinky/libblinky.a(blinky.c.obj)
  .ARM.attributes
-                0x000005c8       0x2c lib/button/libbutton.a(button.c.obj)
+                0x000005c8       0x2c lib/led/libled.a(led.c.obj)
  .ARM.attributes
-                0x000005f4       0x2c lib/led/libled.a(led.c.obj)
+                0x000005f4       0x2c lib/button/libbutton.a(button.c.obj)
  .ARM.attributes
-                0x00000620       0x22 /tmp/ccB4mJVs.o
+                0x00000620       0x2c lib/timer/libtimer.a(timer.c.obj)
  .ARM.attributes
-                0x00000642       0x1e /usr/lib/gcc/arm-none-eabi/13.2.0/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
+                0x0000064c       0x22 /tmp/ccxLFpfV.o
  .ARM.attributes
-                0x00000660       0x2c /usr/lib/gcc/arm-none-eabi/13.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-atexit.o)
+                0x0000066e       0x1e /usr/lib/gcc/arm-none-eabi/13.2.0/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
  .ARM.attributes
-                0x0000068c       0x2c /usr/lib/gcc/arm-none-eabi/13.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-fini.o)
+                0x0000068c       0x2c /usr/lib/gcc/arm-none-eabi/13.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-atexit.o)
  .ARM.attributes
-                0x000006b8       0x2c /usr/lib/gcc/arm-none-eabi/13.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-lock.o)
+                0x000006b8       0x2c /usr/lib/gcc/arm-none-eabi/13.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-fini.o)
  .ARM.attributes
-                0x000006e4       0x2c /usr/lib/gcc/arm-none-eabi/13.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-strlen-stub.o)
+                0x000006e4       0x2c /usr/lib/gcc/arm-none-eabi/13.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-lock.o)
  .ARM.attributes
-                0x00000710       0x2c /usr/lib/gcc/arm-none-eabi/13.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-__atexit.o)
+                0x00000710       0x2c /usr/lib/gcc/arm-none-eabi/13.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-strlen-stub.o)
  .ARM.attributes
-                0x0000073c       0x2c /usr/lib/gcc/arm-none-eabi/13.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-__call_atexit.o)
+                0x0000073c       0x2c /usr/lib/gcc/arm-none-eabi/13.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-__atexit.o)
+ .ARM.attributes
+                0x00000768       0x2c /usr/lib/gcc/arm-none-eabi/13.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-__call_atexit.o)
 
 .comment        0x00000000       0x3c
  .comment       0x00000000       0x3c CMakeFiles/button_poc.dir/main.c.obj
@@ -2427,8 +2453,9 @@ LOAD linker stubs
  .comment       0x0000003c       0x1f CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
  .comment       0x0000003c       0x1f CMakeFiles/button_poc.dir/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
  .comment       0x0000003c       0x1f lib/blinky/libblinky.a(blinky.c.obj)
- .comment       0x0000003c       0x1f lib/button/libbutton.a(button.c.obj)
  .comment       0x0000003c       0x1f lib/led/libled.a(led.c.obj)
+ .comment       0x0000003c       0x1f lib/button/libbutton.a(button.c.obj)
+ .comment       0x0000003c       0x1f lib/timer/libtimer.a(timer.c.obj)
  .comment       0x0000003c       0x1f /usr/lib/gcc/arm-none-eabi/13.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-atexit.o)
  .comment       0x0000003c       0x1f /usr/lib/gcc/arm-none-eabi/13.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-fini.o)
  .comment       0x0000003c       0x1f /usr/lib/gcc/arm-none-eabi/13.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-lock.o)

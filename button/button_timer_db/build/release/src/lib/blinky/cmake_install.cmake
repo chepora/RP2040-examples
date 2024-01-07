@@ -1,4 +1,4 @@
-# Install script for directory: /home/agr/EmbeddedDesign/RP2040/mes_pico_project/button/button_timer_db/src/lib/blinky
+# Install script for directory: /home/agr/EmbeddedDesign/RP2040-examples/button/button_timer_db/src/lib/blinky
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

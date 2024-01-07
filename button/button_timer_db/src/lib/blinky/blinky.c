@@ -7,19 +7,30 @@
     #define BUTTON_PRESSED 1
 #endif
 
-bool blinky_callback(struct repeating_timer *t);
+void blinky_irs_callback(uint gpio, uint32_t event_mask);
+bool blinky_timer_callback(struct repeating_timer *t);
 
 void blinky_init(BLINKY_VAR* ptBlinkyVar){
 
+    // add callbacks to module structs
+    ptBlinkyVar->button_var.button_callback = &blinky_irs_callback;
+    ptBlinkyVar->timer_var.callback = &blinky_timer_callback;
+
     led_init(&ptBlinkyVar->led_var);
-    ptBlinkyVar->timer_var.req_repeating_timer.callback = &blinky_callback;
-    ptBlinkyVar->timer_var.req_repeating_timer.delay_us = ptBlinkyVar->timer_var.delay_us;
+    button_init(&ptBlinkyVar->button_var);
     timer_init(&ptBlinkyVar->timer_var);
     stdio_init_all();
 
 }
 
-bool blinky_callback(struct repeating_timer *t){
+void blinky_irs_callback(uint gpio, uint32_t event_mask){    
+
+    timer_start();
+    gpio_set_irq_enabled(gpio, event_mask, false);
+
+}
+
+bool blinky_timer_callback(struct repeating_timer *t){
 
     led_toggle();
     return true;
@@ -27,6 +38,7 @@ bool blinky_callback(struct repeating_timer *t){
 }
 
 int blinky_loop(BLINKY_VAR* ptBlinkyVar){
+
 
     while(1){
 

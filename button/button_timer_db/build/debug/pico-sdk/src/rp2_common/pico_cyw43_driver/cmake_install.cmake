@@ -39,7 +39,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/agr/EmbeddedDesign/RP2040/mes_pico_project/button/button_timer_db/build/debug/pico-sdk/src/rp2_common/pico_cyw43_driver/cybt_shared_bus/cmake_install.cmake")
+  include("/home/agr/EmbeddedDesign/RP2040-examples/button/button_timer_db/build/debug/pico-sdk/src/rp2_common/pico_cyw43_driver/cybt_shared_bus/cmake_install.cmake")
 
 endif()
 

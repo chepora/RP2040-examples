@@ -20,6 +20,8 @@ typedef struct BUTTON_VAR {
     uint8_t     button_samples_req;
     uint8_t     button_samples_to_do;
 
+    gpio_irq_callback_t button_callback;
+
 } BUTTON_VAR;
 
 void button_init(BUTTON_VAR* ptButtonVar);

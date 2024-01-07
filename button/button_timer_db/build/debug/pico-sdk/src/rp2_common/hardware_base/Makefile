@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/agr/EmbeddedDesign/RP2040/mes_pico_project/button/button_timer_db
+CMAKE_SOURCE_DIR = /home/agr/EmbeddedDesign/RP2040-examples/button/button_timer_db
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/agr/EmbeddedDesign/RP2040/mes_pico_project/button/button_timer_db/build/debug
+CMAKE_BINARY_DIR = /home/agr/EmbeddedDesign/RP2040-examples/button/button_timer_db/build/debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,14 +87,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/agr/EmbeddedDesign/RP2040/mes_pico_project/button/button_timer_db/build/debug && $(CMAKE_COMMAND) -E cmake_progress_start /home/agr/EmbeddedDesign/RP2040/mes_pico_project/button/button_timer_db/build/debug/CMakeFiles /home/agr/EmbeddedDesign/RP2040/mes_pico_project/button/button_timer_db/build/debug/pico-sdk/src/rp2_common/hardware_base//CMakeFiles/progress.marks
-	cd /home/agr/EmbeddedDesign/RP2040/mes_pico_project/button/button_timer_db/build/debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pico-sdk/src/rp2_common/hardware_base/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/agr/EmbeddedDesign/RP2040/mes_pico_project/button/button_timer_db/build/debug/CMakeFiles 0
+	cd /home/agr/EmbeddedDesign/RP2040-examples/button/button_timer_db/build/debug && $(CMAKE_COMMAND) -E cmake_progress_start /home/agr/EmbeddedDesign/RP2040-examples/button/button_timer_db/build/debug/CMakeFiles /home/agr/EmbeddedDesign/RP2040-examples/button/button_timer_db/build/debug/pico-sdk/src/rp2_common/hardware_base//CMakeFiles/progress.marks
+	cd /home/agr/EmbeddedDesign/RP2040-examples/button/button_timer_db/build/debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pico-sdk/src/rp2_common/hardware_base/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/agr/EmbeddedDesign/RP2040-examples/button/button_timer_db/build/debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/agr/EmbeddedDesign/RP2040/mes_pico_project/button/button_timer_db/build/debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pico-sdk/src/rp2_common/hardware_base/clean
+	cd /home/agr/EmbeddedDesign/RP2040-examples/button/button_timer_db/build/debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pico-sdk/src/rp2_common/hardware_base/clean
 .PHONY : clean
 
 # The main clean target
@@ -103,17 +103,17 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/agr/EmbeddedDesign/RP2040/mes_pico_project/button/button_timer_db/build/debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pico-sdk/src/rp2_common/hardware_base/preinstall
+	cd /home/agr/EmbeddedDesign/RP2040-examples/button/button_timer_db/build/debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pico-sdk/src/rp2_common/hardware_base/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/agr/EmbeddedDesign/RP2040/mes_pico_project/button/button_timer_db/build/debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pico-sdk/src/rp2_common/hardware_base/preinstall
+	cd /home/agr/EmbeddedDesign/RP2040-examples/button/button_timer_db/build/debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pico-sdk/src/rp2_common/hardware_base/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/agr/EmbeddedDesign/RP2040/mes_pico_project/button/button_timer_db/build/debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/agr/EmbeddedDesign/RP2040-examples/button/button_timer_db/build/debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Help Target
@@ -135,6 +135,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/agr/EmbeddedDesign/RP2040/mes_pico_project/button/button_timer_db/build/debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/agr/EmbeddedDesign/RP2040-examples/button/button_timer_db/build/debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

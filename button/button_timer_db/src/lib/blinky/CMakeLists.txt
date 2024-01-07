@@ -5,5 +5,5 @@ set(SRC_FILES blinky.c
 
 add_library(blinky ${SRC_FILES})
 
-target_link_libraries(blinky pico_stdlib button led)
+target_link_libraries(blinky pico_stdlib led button timer)
 target_include_directories(blinky PUBLIC ./include/)

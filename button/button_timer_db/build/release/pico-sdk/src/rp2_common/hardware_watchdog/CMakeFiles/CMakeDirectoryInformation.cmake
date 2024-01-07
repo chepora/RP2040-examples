@@ -3,7 +3,7 @@
 
 # Relative path conversion top directories.
 set(CMAKE_RELATIVE_PATH_TOP_SOURCE "/home/agr/EmbeddedDesign/RP2040/pico-sdk")
-set(CMAKE_RELATIVE_PATH_TOP_BINARY "/home/agr/EmbeddedDesign/RP2040/mes_pico_project/button/button_timer_db/build/release")
+set(CMAKE_RELATIVE_PATH_TOP_BINARY "/home/agr/EmbeddedDesign/RP2040-examples/button/button_timer_db/build/release")
 
 # Force unix paths in dependencies.
 set(CMAKE_FORCE_UNIX_PATHS 1)

@@ -3,7 +3,7 @@
 
 # Relative path conversion top directories.
 set(CMAKE_RELATIVE_PATH_TOP_SOURCE "/home/agr/EmbeddedDesign/RP2040/pico-sdk/src/common/boot_uf2")
-set(CMAKE_RELATIVE_PATH_TOP_BINARY "/home/agr/EmbeddedDesign/RP2040/mes_pico_project/button/button_timer_db/build/release/elf2uf2")
+set(CMAKE_RELATIVE_PATH_TOP_BINARY "/home/agr/EmbeddedDesign/RP2040-examples/button/button_timer_db/build/release/elf2uf2")
 
 # Force unix paths in dependencies.
 set(CMAKE_FORCE_UNIX_PATHS 1)

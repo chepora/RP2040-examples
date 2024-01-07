@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/agr/EmbeddedDesign/RP2040/mes_pico_project/button/button_timer_db/build/debug/pioasm/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/agr/EmbeddedDesign/RP2040-examples/button/button_timer_db/build/debug/pioasm/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

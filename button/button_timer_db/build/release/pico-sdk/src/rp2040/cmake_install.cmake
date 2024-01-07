@@ -39,8 +39,8 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/agr/EmbeddedDesign/RP2040/mes_pico_project/button/button_timer_db/build/release/pico-sdk/src/rp2040/hardware_regs/cmake_install.cmake")
-  include("/home/agr/EmbeddedDesign/RP2040/mes_pico_project/button/button_timer_db/build/release/pico-sdk/src/rp2040/hardware_structs/cmake_install.cmake")
+  include("/home/agr/EmbeddedDesign/RP2040-examples/button/button_timer_db/build/release/pico-sdk/src/rp2040/hardware_regs/cmake_install.cmake")
+  include("/home/agr/EmbeddedDesign/RP2040-examples/button/button_timer_db/build/release/pico-sdk/src/rp2040/hardware_structs/cmake_install.cmake")
 
 endif()
 

@@ -1,4 +1,4 @@
-# Install script for directory: /home/agr/EmbeddedDesign/RP2040/mes_pico_project/button/button_timer_db/src/lib
+# Install script for directory: /home/agr/EmbeddedDesign/RP2040-examples/button/button_timer_db/src/lib
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,9 +39,10 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/agr/EmbeddedDesign/RP2040/mes_pico_project/button/button_timer_db/build/release/src/lib/blinky/cmake_install.cmake")
-  include("/home/agr/EmbeddedDesign/RP2040/mes_pico_project/button/button_timer_db/build/release/src/lib/button/cmake_install.cmake")
-  include("/home/agr/EmbeddedDesign/RP2040/mes_pico_project/button/button_timer_db/build/release/src/lib/led/cmake_install.cmake")
+  include("/home/agr/EmbeddedDesign/RP2040-examples/button/button_timer_db/build/release/src/lib/blinky/cmake_install.cmake")
+  include("/home/agr/EmbeddedDesign/RP2040-examples/button/button_timer_db/build/release/src/lib/led/cmake_install.cmake")
+  include("/home/agr/EmbeddedDesign/RP2040-examples/button/button_timer_db/build/release/src/lib/button/cmake_install.cmake")
+  include("/home/agr/EmbeddedDesign/RP2040-examples/button/button_timer_db/build/release/src/lib/timer/cmake_install.cmake")
 
 endif()
 
