@@ -1,7 +1,9 @@
 # First steps with the BNO055
 
-Connecting to the BNO055 via I2C.
+Connecting to the [BNO055](https://www.bosch-sensortec.com/products/smart-sensor-systems/bno055/) via I2C.
+
 Triggering selftests and reading some values.
+
 All is output to UART serial.
 
 ## Configuring the environment
