@@ -13,10 +13,18 @@ All examples are independent of another and all depend on [RPi Pico SDK V1.5.1](
 - [`led`](https://github.com/chepora/RP2040-examples/tree/main/led)
     - 
 
-- [`serial`](https://github.com/chepora/RP2040-examples/tree/main/serial)
-    -
+- [`i2c`](https://github.com/chepora/RP2040-examples/tree/main/i2c)
+    - [`bno055](https://github.com/chepora/RP2040-examples/tree/main/i2c/bno055): First steps with the BNO055
 
 - [`timer`](https://github.com/chepora/RP2040-examples/tree/main/timer)
     - [`timer_repeating_led`](https://github.com/chepora/RP2040-examples/tree/main/timer/timer_repeating_led): A repeating timer that toggles the LED
 
 
+## License
+
+Licensed under either of
+
+    - Apache License, Version 2.0 (LICENSE-APACHE or http://www.apache.org/licenses/LICENSE-2.0)
+    - MIT license (LICENSE-MIT or http://opensource.org/licenses/MIT)
+
+at your option.
