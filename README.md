@@ -14,7 +14,7 @@ All examples are independent of another and all depend on [RPi Pico SDK V1.5.1](
     - 
 
 - [`i2c`](https://github.com/chepora/RP2040-examples/tree/main/i2c)
-    - [`bno055](https://github.com/chepora/RP2040-examples/tree/main/i2c/bno055): First steps with the BNO055
+    - [`bno055`](https://github.com/chepora/RP2040-examples/tree/main/i2c/bno055): First steps with the BNO055
 
 - [`timer`](https://github.com/chepora/RP2040-examples/tree/main/timer)
     - [`timer_repeating_led`](https://github.com/chepora/RP2040-examples/tree/main/timer/timer_repeating_led): A repeating timer that toggles the LED
