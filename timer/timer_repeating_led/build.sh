@@ -4,7 +4,6 @@ ROOTDIR=`pwd`
 CONFIGS="debug release"
 
 PICO_BOARD=adafruit_feather_rp2040
-PICO_TOOL_PATH=/home/agr/pico/picotool/build/picotool
 
 for CONFIG in $CONFIGS; do
     BUILDFOLDER=$ROOTDIR/build/$CONFIG
