@@ -10,14 +10,17 @@ All examples are independent of another and all depend on [RPi Pico SDK V1.5.1](
     - [`button_ir_no_db`](https://github.com/chepora/RP2040-examples/tree/main/button/button_ir_no_db): Simple Button with Interrupt and LED Example (no debouncing)
     - [`button_timer_db`](https://github.com/chepora/RP2040-examples/tree/main/button): Simple Button with Interrupt, Debouncing and LED Example
 
-- [`led`](https://github.com/chepora/RP2040-examples/tree/main/led)
-    - 
-
 - [`i2c`](https://github.com/chepora/RP2040-examples/tree/main/i2c)
     - [`bno055`](https://github.com/chepora/RP2040-examples/tree/main/i2c/bno055): First steps with the BNO055
 
+- [`led`](https://github.com/chepora/RP2040-examples/tree/main/led)
+    - [`WS2812`](https://github.com/chepora/RP2040-examples/tree/main/led/WS2812): driving a WS2812 LED using PIO
+
+- [`pio`](https://github.com/chepora/RP2040-examples/tree/main/pio)
+    - 
+
 - [`timer`](https://github.com/chepora/RP2040-examples/tree/main/timer)
-    - [`timer_repeating_led`](https://github.com/chepora/RP2040-examples/tree/main/timer/timer_repeating_led): A repeating timer that toggles the LED
+    - [`timer_repeating_led`](https://github.com/chepora/RP2040-examples/tree/main/timer/timer_repeating_led): A repeating timer that toggles a LED
 
 
 ## License
