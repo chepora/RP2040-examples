@@ -31,3 +31,7 @@ Licensed under either of
     - MIT license (LICENSE-MIT or http://opensource.org/licenses/MIT)
 
 at your option.
+
+Parts that were taken from the Raspberry Pi (Trading) Ltd.'s examples are under
+
+    - 	BSD-3-Clause(BSD-3-Clause or https://opensource.org/license/BSD-3-clause/) Copyright (c) 2020 Raspberry Pi (Trading) Ltd.
